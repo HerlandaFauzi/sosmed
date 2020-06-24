@@ -1,0 +1,39 @@
+@media screen and (max-width: 1030px) {
+    main {
+        padding: 0;
+    }
+    .produk-page {
+        width: 100%;
+        padding: 50px;
+    }
+    .footer-inline {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .src-input {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .produk-page {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .mob-menu {
+        display: block;
+    }
+    .header-right, .src-wrap, .cart-display {
+        display: none;
+    }
+    .webTitle, .header-left, .header-inline {
+        width: 100%;
+    }
+    .webTitle {
+        text-align: center;
+    }
+}

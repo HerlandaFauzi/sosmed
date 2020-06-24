@@ -1,0 +1,421 @@
+body {
+    background-color: #eee;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    background-color: #ff0060;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+    height: 60px;
+}
+header a:hover {
+    text-decoration: none;
+}
+.header-inline {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .float-left {
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webTitle {
+    min-width: 200px;
+}
+.webTitle a {
+    color: #fff;
+}
+.webTitle h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.src-wrap {
+    margin-left: 30px;
+    position: relative;
+}
+.src-label {
+    position: absolute;
+    left: 12px;
+    top: 13px;
+    color: rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+.src-input {
+    width: 320px;
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 38px;
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+} 
+.src-input::placeholder  {
+    opacity: 1;
+    transition: all 250ms;
+}
+.src-input:focus::placeholder {
+    opacity: 0;
+}
+
+header .float-right {
+    display: flex;
+}
+.h-menu {
+    position: relative;
+    width: 50px;
+    height: 60px;
+}
+.h-menu .icon i {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-menu.user {
+    margin-left: 20px;
+}
+.h-menu.user .icon {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    transition: 300ms ease;
+}
+
+.h-menu.user .icon img {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.h-menu .icon .n {
+    position: absolute;
+    top: 18px;
+    right: 13px;
+    width: 11px;
+    height: 11px;
+    background-color: #ffff00;
+    border-radius: 100%;
+    border: 2px solid #ff0060;
+}
+.h-menu.user .icon span {
+    position: absolute;
+    bottom: 14px;
+    right: 8px;
+    width: 11px;
+    height: 11px;
+    background-color: #00ff80;
+    border-radius: 100%;
+    border: 2px solid #ff0060;
+}
+.h-menu.user .submenu {
+    width: 230px;
+}
+
+.h-menu li {
+    padding: 0;
+}
+.h-menu li a {
+    display: block;
+    padding: 15px;
+    transition: 250ms ease;
+}
+.h-menu li a:hover {
+    background-color: rgba(0,0,0,0.07);
+}
+.submenu {
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    right: 0;
+    border-radius: 3px;
+    top: 58px;
+    font-size: 14px;
+    display: none;
+}
+.h-menu:hover .icon {
+    opacity: 0.7;
+}
+.h-menu:hover .submenu {
+    display: block;
+    animation: subFade 400ms ease;
+}
+@keyframes subFade {
+    from {
+        top: 56px;
+        opacity: 0;
+    }
+    to {
+        top: 65px;
+        opacity: 1;
+    }
+}
+.submenu:before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: -8px;
+    border-bottom: 8px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.submenu h5 {
+    font-size: 16px;
+    padding: 7px 15px;
+    letter-spacing: 1px;
+}
+.submenu .list-group-item {
+    border: 0;
+    border-bottom: 1px dashed #ddd;
+}
+.h-menu.user .submenu .list-group-item a {
+    padding: 10px 15px;
+}
+.submenu a {
+    color: #444;
+}
+
+.submenu .list-group-item:last-child {
+    border: 0;
+}
+.submenu .ico {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.n-ico img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.n-text {
+    font-size: 12px;
+    width: calc(100% - 40px);
+    padding-left: 15px;
+}
+.n-text p, .n-text h6 {    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.n-text p {
+    margin-bottom: 0;
+}
+
+.mob-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #ff0062;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 10;
+}
+.mob-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mob-menu ul, .mob-menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+.mob-menu ul li {
+    width: 80px;
+    position: relative;
+    text-align: center;
+}
+.mob-menu a {
+    color: #eee;
+    font-size: 10px;
+    letter-spacing: 0.7px;
+}
+.mob-menu p {
+    margin: 0;
+}
+.mob-menu a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.mob-menu img {
+    width: 15px;
+    margin-bottom: 5px;
+}
+.mob-menu i {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.mob-menu .cn {
+    position: absolute;
+    top: 5px;
+    right: 27px;
+    width: 7px;
+    height: 7px;
+    background-color: #fffc3d;
+    border-radius: 100%;
+}
+.main {
+    position: relative;
+    width: 100%;
+    margin: 60px 0 0px;
+    padding: 30px 0;
+}
+.write-stat, .stat-view {
+    background-color: #fff;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 15px 20px;
+    position: relative;
+    width: 40%;
+    margin: 0 auto 30px;
+}
+
+.stat-view .post-body {
+    display: block;
+    color: #333;
+    margin-bottom: 20px;
+}
+.stat-view .post-body:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.write-box {
+    width: 100%;
+    position: relative;
+}
+.write-box textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+}
+.write-box-act button {
+    border: 0;
+    width: 32px;
+    height: 32px;
+    outline: none;
+    color: rgba(0,0,0,0.8);
+    border: 1px solid #ccc;
+}
+.write-box-act button:hover {
+    opacity: 0.7;
+}
+.write-box-act .send {
+    width: unset;
+    height: unset;
+    padding: 3px 10px;
+    font-size: 14px;
+    background-color: #ff0060;
+    border-color: #ff0060;
+    color: #fff;
+    font-weight: 500;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.user-post {
+    display: flex;
+    position: relative;
+}
+.user-post img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.user-post .text {
+    margin-left: 15px;
+}
+
+.stat-view-act {
+    border-top: 1px dashed #ccc;
+    padding: 10px 0 0;
+}
+.stat-view-act button {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    color: rgba(0,0,0,0.7);
+}
+.stat-view-act .check {
+    color: #ff0060;
+}
+.stat-view .count {
+    margin-bottom: 15px;
+}
+.stat-view .count span {
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    margin-right: 7px;
+    border-radius: 15px;
+    font-size: 11px;
+} 
+.comment-view {
+    margin-top: 15px;
+    display: flex;
+    position: relative;
+}
+.comment-view .avatar {
+    margin-right: 15px;
+}
+.comment-view .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.comment-view .input {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.comment-view .field {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    height: 35px;
+    outline: none;
+    padding: 0 20px;
+    padding-right: 40px;
+    font-size: 14px;
+}
+.comment-view button {
+    border: 0;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    background-color: transparent;
+    opacity: 0.7;
+    top: 7px;
+}    
